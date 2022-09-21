@@ -1,11 +1,18 @@
-/**
- * CSC 345-02 Assignment #1 (version 1.2)
- * 
- * On my honor, Nicholas Storm McCrea, this assignment is my own work.  
- * I, Nicholas Storm McCrea, will follow the instructor's rules and processes 
- * related to academic integrity as directed in the course syllabus.
- *
- */
+/* ------------------------------------------------------------------------------
+* Create a simple lexical analyzer
+*
+* Token ID | Token Name | Lexeme in Regex
+* 0	   | FLOATDCL   | f
+* 1	   | INTDCL     | i
+* 2	   | PRINT      | p
+* 3	   | ID		| a + b + c + d + e + g + h + j + k + l + m + n + o + q + r + s + t + u + v + w + x + y + z
+* 4	   | ASSIGN     | =
+* 5	   | PLUS	| +
+* 6	   | MINUS      | -
+* 7	   | INUM	| (0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)^+
+* 8	   | FNUM	| (0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)^+*(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9)^+
+*
+*/ ------------------------------------------------------------------------------
 
 import java.io.File;
 import java.io.FileNotFoundException;
