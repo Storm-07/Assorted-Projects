@@ -18,25 +18,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-// Students -- Add your import declarations here
-
 public class LexicalAnalyzer {
-	
-	// Students -- Add your constants here
 	
 	public static void main(String[] args) {
 		try {
-			// Do NOT make any changes to the following TWO lines
 			File file = new File(args[0]);		
-			Scanner sc = new Scanner(file);		//*** Do not make any other Scanners ***//
-			
-			// *** NOTE ***
-			// For this assignment, you are NOT allowed to use any member methods of 
-			// class java.util.Scanner except hasNextLine and nextLine.  
-			// For example, you CANNOT use any of hasNextInt, nextInt, hasNextFloat, nextFloat, 
-			// hasNextDouble and nextDouble for this assignment.  
-			
-			// Students -- Your code and methods calls go here
+			Scanner sc = new Scanner(file);	
 			
 			String filecontent = getLine(sc); // one line all file content w/ o spaces
 			int token = 0;
@@ -78,8 +65,6 @@ public class LexicalAnalyzer {
 			System.out.println("ERROR - cannot open front.in \n");
 		}
 	}
-	
-	// Students -- Add your method declarations here
 
 	// gets all file content and subtracts all spaces and new lines
 	public static String getLine(Scanner sc) { 
@@ -155,6 +140,7 @@ public class LexicalAnalyzer {
 		return isValid;
 	}
 
+	// return invalid float values
 	public static String getInValidFloat(String str) {
 		String inv = "";
 		int secDotIdx = 0;
